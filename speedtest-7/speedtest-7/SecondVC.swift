@@ -17,7 +17,7 @@ class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = finalName
+        nameLabel.text = "Hello " + finalName
 
         // Do any additional setup after loading the view.
     }

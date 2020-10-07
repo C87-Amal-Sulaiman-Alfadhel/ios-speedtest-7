@@ -26,7 +26,14 @@ class ViewController: UIViewController {
         if textField.text!.count >= 2{
             self.nameText = textField.text!
         performSegue(withIdentifier: "segue", sender: nil)
-    }
+        } else {
+            let alertController = UIAlertController(title: "You did not enter a valid name", message: "Click the button to add a name", preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "Go back", style: .cancel) { (alert) in
+                self
+            }
+            alertController.addAction(restartAction)
+            present(alertController, animated: true, completion: nil)
+        }
         
     }
     
